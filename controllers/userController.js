@@ -53,7 +53,6 @@ const signupUser = async (req, res) => {
     const token = createToken(user._id);
     return res.status(200).json({ user, token });
   } catch (err) {
-    console.log(err);
     return res.status(404).json({
       error:
         "An error occured. Account could not be created. Please try again.",
